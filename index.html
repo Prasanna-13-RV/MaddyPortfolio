@@ -1,0 +1,1562 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			:root,
+			:host {
+				--fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+				--fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+				--fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+				--fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+				--fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+				--fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+				--fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+				--fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+				--fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+				--fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+			}
+
+			svg:not(:root).svg-inline--fa,
+			svg:not(:host).svg-inline--fa {
+				overflow: visible;
+				box-sizing: content-box;
+			}
+
+			.svg-inline--fa {
+				display: var(--fa-display, inline-block);
+				height: 1em;
+				overflow: visible;
+				vertical-align: -0.125em;
+			}
+			.svg-inline--fa.fa-2xs {
+				vertical-align: 0.1em;
+			}
+			.svg-inline--fa.fa-xs {
+				vertical-align: 0em;
+			}
+			.svg-inline--fa.fa-sm {
+				vertical-align: -0.0714285705em;
+			}
+			.svg-inline--fa.fa-lg {
+				vertical-align: -0.2em;
+			}
+			.svg-inline--fa.fa-xl {
+				vertical-align: -0.25em;
+			}
+			.svg-inline--fa.fa-2xl {
+				vertical-align: -0.3125em;
+			}
+			.svg-inline--fa.fa-pull-left {
+				margin-right: var(--fa-pull-margin, 0.3em);
+				width: auto;
+			}
+			.svg-inline--fa.fa-pull-right {
+				margin-left: var(--fa-pull-margin, 0.3em);
+				width: auto;
+			}
+			.svg-inline--fa.fa-li {
+				width: var(--fa-li-width, 2em);
+				top: 0.25em;
+			}
+			.svg-inline--fa.fa-fw {
+				width: var(--fa-fw-width, 1.25em);
+			}
+
+			.fa-layers svg.svg-inline--fa {
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
+			.fa-layers-counter,
+			.fa-layers-text {
+				display: inline-block;
+				position: absolute;
+				text-align: center;
+			}
+
+			.fa-layers {
+				display: inline-block;
+				height: 1em;
+				position: relative;
+				text-align: center;
+				vertical-align: -0.125em;
+				width: 1em;
+			}
+			.fa-layers svg.svg-inline--fa {
+				-webkit-transform-origin: center center;
+				transform-origin: center center;
+			}
+
+			.fa-layers-text {
+				left: 50%;
+				top: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				-webkit-transform-origin: center center;
+				transform-origin: center center;
+			}
+
+			.fa-layers-counter {
+				background-color: var(--fa-counter-background-color, #ff253a);
+				border-radius: var(--fa-counter-border-radius, 1em);
+				box-sizing: border-box;
+				color: var(--fa-inverse, #fff);
+				line-height: var(--fa-counter-line-height, 1);
+				max-width: var(--fa-counter-max-width, 5em);
+				min-width: var(--fa-counter-min-width, 1.5em);
+				overflow: hidden;
+				padding: var(--fa-counter-padding, 0.25em 0.5em);
+				right: var(--fa-right, 0);
+				text-overflow: ellipsis;
+				top: var(--fa-top, 0);
+				-webkit-transform: scale(var(--fa-counter-scale, 0.25));
+				transform: scale(var(--fa-counter-scale, 0.25));
+				-webkit-transform-origin: top right;
+				transform-origin: top right;
+			}
+
+			.fa-layers-bottom-right {
+				bottom: var(--fa-bottom, 0);
+				right: var(--fa-right, 0);
+				top: auto;
+				-webkit-transform: scale(var(--fa-layers-scale, 0.25));
+				transform: scale(var(--fa-layers-scale, 0.25));
+				-webkit-transform-origin: bottom right;
+				transform-origin: bottom right;
+			}
+
+			.fa-layers-bottom-left {
+				bottom: var(--fa-bottom, 0);
+				left: var(--fa-left, 0);
+				right: auto;
+				top: auto;
+				-webkit-transform: scale(var(--fa-layers-scale, 0.25));
+				transform: scale(var(--fa-layers-scale, 0.25));
+				-webkit-transform-origin: bottom left;
+				transform-origin: bottom left;
+			}
+
+			.fa-layers-top-right {
+				top: var(--fa-top, 0);
+				right: var(--fa-right, 0);
+				-webkit-transform: scale(var(--fa-layers-scale, 0.25));
+				transform: scale(var(--fa-layers-scale, 0.25));
+				-webkit-transform-origin: top right;
+				transform-origin: top right;
+			}
+
+			.fa-layers-top-left {
+				left: var(--fa-left, 0);
+				right: auto;
+				top: var(--fa-top, 0);
+				-webkit-transform: scale(var(--fa-layers-scale, 0.25));
+				transform: scale(var(--fa-layers-scale, 0.25));
+				-webkit-transform-origin: top left;
+				transform-origin: top left;
+			}
+
+			.fa-1x {
+				font-size: 1em;
+			}
+
+			.fa-2x {
+				font-size: 2em;
+			}
+
+			.fa-3x {
+				font-size: 3em;
+			}
+
+			.fa-4x {
+				font-size: 4em;
+			}
+
+			.fa-5x {
+				font-size: 5em;
+			}
+
+			.fa-6x {
+				font-size: 6em;
+			}
+
+			.fa-7x {
+				font-size: 7em;
+			}
+
+			.fa-8x {
+				font-size: 8em;
+			}
+
+			.fa-9x {
+				font-size: 9em;
+			}
+
+			.fa-10x {
+				font-size: 10em;
+			}
+
+			.fa-2xs {
+				font-size: 0.625em;
+				line-height: 0.1em;
+				vertical-align: 0.225em;
+			}
+
+			.fa-xs {
+				font-size: 0.75em;
+				line-height: 0.0833333337em;
+				vertical-align: 0.125em;
+			}
+
+			.fa-sm {
+				font-size: 0.875em;
+				line-height: 0.0714285718em;
+				vertical-align: 0.0535714295em;
+			}
+
+			.fa-lg {
+				font-size: 1.25em;
+				line-height: 0.05em;
+				vertical-align: -0.075em;
+			}
+
+			.fa-xl {
+				font-size: 1.5em;
+				line-height: 0.0416666682em;
+				vertical-align: -0.125em;
+			}
+
+			.fa-2xl {
+				font-size: 2em;
+				line-height: 0.03125em;
+				vertical-align: -0.1875em;
+			}
+
+			.fa-fw {
+				text-align: center;
+				width: 1.25em;
+			}
+
+			.fa-ul {
+				list-style-type: none;
+				margin-left: var(--fa-li-margin, 2.5em);
+				padding-left: 0;
+			}
+			.fa-ul > li {
+				position: relative;
+			}
+
+			.fa-li {
+				left: calc(var(--fa-li-width, 2em) * -1);
+				position: absolute;
+				text-align: center;
+				width: var(--fa-li-width, 2em);
+				line-height: inherit;
+			}
+
+			.fa-border {
+				border-color: var(--fa-border-color, #eee);
+				border-radius: var(--fa-border-radius, 0.1em);
+				border-style: var(--fa-border-style, solid);
+				border-width: var(--fa-border-width, 0.08em);
+				padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+			}
+
+			.fa-pull-left {
+				float: left;
+				margin-right: var(--fa-pull-margin, 0.3em);
+			}
+
+			.fa-pull-right {
+				float: right;
+				margin-left: var(--fa-pull-margin, 0.3em);
+			}
+
+			.fa-beat {
+				-webkit-animation-name: fa-beat;
+				animation-name: fa-beat;
+				-webkit-animation-delay: var(--fa-animation-delay, 0s);
+				animation-delay: var(--fa-animation-delay, 0s);
+				-webkit-animation-direction: var(
+					--fa-animation-direction,
+					normal
+				);
+				animation-direction: var(--fa-animation-direction, normal);
+				-webkit-animation-duration: var(--fa-animation-duration, 1s);
+				animation-duration: var(--fa-animation-duration, 1s);
+				-webkit-animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				-webkit-animation-timing-function: var(
+					--fa-animation-timing,
+					ease-in-out
+				);
+				animation-timing-function: var(
+					--fa-animation-timing,
+					ease-in-out
+				);
+			}
+
+			.fa-bounce {
+				-webkit-animation-name: fa-bounce;
+				animation-name: fa-bounce;
+				-webkit-animation-delay: var(--fa-animation-delay, 0s);
+				animation-delay: var(--fa-animation-delay, 0s);
+				-webkit-animation-direction: var(
+					--fa-animation-direction,
+					normal
+				);
+				animation-direction: var(--fa-animation-direction, normal);
+				-webkit-animation-duration: var(--fa-animation-duration, 1s);
+				animation-duration: var(--fa-animation-duration, 1s);
+				-webkit-animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				-webkit-animation-timing-function: var(
+					--fa-animation-timing,
+					cubic-bezier(0.28, 0.84, 0.42, 1)
+				);
+				animation-timing-function: var(
+					--fa-animation-timing,
+					cubic-bezier(0.28, 0.84, 0.42, 1)
+				);
+			}
+
+			.fa-fade {
+				-webkit-animation-name: fa-fade;
+				animation-name: fa-fade;
+				-webkit-animation-delay: var(--fa-animation-delay, 0s);
+				animation-delay: var(--fa-animation-delay, 0s);
+				-webkit-animation-direction: var(
+					--fa-animation-direction,
+					normal
+				);
+				animation-direction: var(--fa-animation-direction, normal);
+				-webkit-animation-duration: var(--fa-animation-duration, 1s);
+				animation-duration: var(--fa-animation-duration, 1s);
+				-webkit-animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				-webkit-animation-timing-function: var(
+					--fa-animation-timing,
+					cubic-bezier(0.4, 0, 0.6, 1)
+				);
+				animation-timing-function: var(
+					--fa-animation-timing,
+					cubic-bezier(0.4, 0, 0.6, 1)
+				);
+			}
+
+			.fa-beat-fade {
+				-webkit-animation-name: fa-beat-fade;
+				animation-name: fa-beat-fade;
+				-webkit-animation-delay: var(--fa-animation-delay, 0s);
+				animation-delay: var(--fa-animation-delay, 0s);
+				-webkit-animation-direction: var(
+					--fa-animation-direction,
+					normal
+				);
+				animation-direction: var(--fa-animation-direction, normal);
+				-webkit-animation-duration: var(--fa-animation-duration, 1s);
+				animation-duration: var(--fa-animation-duration, 1s);
+				-webkit-animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				-webkit-animation-timing-function: var(
+					--fa-animation-timing,
+					cubic-bezier(0.4, 0, 0.6, 1)
+				);
+				animation-timing-function: var(
+					--fa-animation-timing,
+					cubic-bezier(0.4, 0, 0.6, 1)
+				);
+			}
+
+			.fa-flip {
+				-webkit-animation-name: fa-flip;
+				animation-name: fa-flip;
+				-webkit-animation-delay: var(--fa-animation-delay, 0s);
+				animation-delay: var(--fa-animation-delay, 0s);
+				-webkit-animation-direction: var(
+					--fa-animation-direction,
+					normal
+				);
+				animation-direction: var(--fa-animation-direction, normal);
+				-webkit-animation-duration: var(--fa-animation-duration, 1s);
+				animation-duration: var(--fa-animation-duration, 1s);
+				-webkit-animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				-webkit-animation-timing-function: var(
+					--fa-animation-timing,
+					ease-in-out
+				);
+				animation-timing-function: var(
+					--fa-animation-timing,
+					ease-in-out
+				);
+			}
+
+			.fa-shake {
+				-webkit-animation-name: fa-shake;
+				animation-name: fa-shake;
+				-webkit-animation-delay: var(--fa-animation-delay, 0s);
+				animation-delay: var(--fa-animation-delay, 0s);
+				-webkit-animation-direction: var(
+					--fa-animation-direction,
+					normal
+				);
+				animation-direction: var(--fa-animation-direction, normal);
+				-webkit-animation-duration: var(--fa-animation-duration, 1s);
+				animation-duration: var(--fa-animation-duration, 1s);
+				-webkit-animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				-webkit-animation-timing-function: var(
+					--fa-animation-timing,
+					linear
+				);
+				animation-timing-function: var(--fa-animation-timing, linear);
+			}
+
+			.fa-spin {
+				-webkit-animation-name: fa-spin;
+				animation-name: fa-spin;
+				-webkit-animation-delay: var(--fa-animation-delay, 0s);
+				animation-delay: var(--fa-animation-delay, 0s);
+				-webkit-animation-direction: var(
+					--fa-animation-direction,
+					normal
+				);
+				animation-direction: var(--fa-animation-direction, normal);
+				-webkit-animation-duration: var(--fa-animation-duration, 2s);
+				animation-duration: var(--fa-animation-duration, 2s);
+				-webkit-animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				-webkit-animation-timing-function: var(
+					--fa-animation-timing,
+					linear
+				);
+				animation-timing-function: var(--fa-animation-timing, linear);
+			}
+
+			.fa-spin-reverse {
+				--fa-animation-direction: reverse;
+			}
+
+			.fa-pulse,
+			.fa-spin-pulse {
+				-webkit-animation-name: fa-spin;
+				animation-name: fa-spin;
+				-webkit-animation-direction: var(
+					--fa-animation-direction,
+					normal
+				);
+				animation-direction: var(--fa-animation-direction, normal);
+				-webkit-animation-duration: var(--fa-animation-duration, 1s);
+				animation-duration: var(--fa-animation-duration, 1s);
+				-webkit-animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				animation-iteration-count: var(
+					--fa-animation-iteration-count,
+					infinite
+				);
+				-webkit-animation-timing-function: var(
+					--fa-animation-timing,
+					steps(8)
+				);
+				animation-timing-function: var(--fa-animation-timing, steps(8));
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				.fa-beat,
+				.fa-bounce,
+				.fa-fade,
+				.fa-beat-fade,
+				.fa-flip,
+				.fa-pulse,
+				.fa-shake,
+				.fa-spin,
+				.fa-spin-pulse {
+					-webkit-animation-delay: -1ms;
+					animation-delay: -1ms;
+					-webkit-animation-duration: 1ms;
+					animation-duration: 1ms;
+					-webkit-animation-iteration-count: 1;
+					animation-iteration-count: 1;
+					-webkit-transition-delay: 0s;
+					transition-delay: 0s;
+					-webkit-transition-duration: 0s;
+					transition-duration: 0s;
+				}
+			}
+			@-webkit-keyframes fa-beat {
+				0%,
+				90% {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+				45% {
+					-webkit-transform: scale(var(--fa-beat-scale, 1.25));
+					transform: scale(var(--fa-beat-scale, 1.25));
+				}
+			}
+			@keyframes fa-beat {
+				0%,
+				90% {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+				45% {
+					-webkit-transform: scale(var(--fa-beat-scale, 1.25));
+					transform: scale(var(--fa-beat-scale, 1.25));
+				}
+			}
+			@-webkit-keyframes fa-bounce {
+				0% {
+					-webkit-transform: scale(1, 1) translateY(0);
+					transform: scale(1, 1) translateY(0);
+				}
+				10% {
+					-webkit-transform: scale(
+							var(--fa-bounce-start-scale-x, 1.1),
+							var(--fa-bounce-start-scale-y, 0.9)
+						)
+						translateY(0);
+					transform: scale(
+							var(--fa-bounce-start-scale-x, 1.1),
+							var(--fa-bounce-start-scale-y, 0.9)
+						)
+						translateY(0);
+				}
+				30% {
+					-webkit-transform: scale(
+							var(--fa-bounce-jump-scale-x, 0.9),
+							var(--fa-bounce-jump-scale-y, 1.1)
+						)
+						translateY(var(--fa-bounce-height, -0.5em));
+					transform: scale(
+							var(--fa-bounce-jump-scale-x, 0.9),
+							var(--fa-bounce-jump-scale-y, 1.1)
+						)
+						translateY(var(--fa-bounce-height, -0.5em));
+				}
+				50% {
+					-webkit-transform: scale(
+							var(--fa-bounce-land-scale-x, 1.05),
+							var(--fa-bounce-land-scale-y, 0.95)
+						)
+						translateY(0);
+					transform: scale(
+							var(--fa-bounce-land-scale-x, 1.05),
+							var(--fa-bounce-land-scale-y, 0.95)
+						)
+						translateY(0);
+				}
+				57% {
+					-webkit-transform: scale(1, 1)
+						translateY(var(--fa-bounce-rebound, -0.125em));
+					transform: scale(1, 1)
+						translateY(var(--fa-bounce-rebound, -0.125em));
+				}
+				64% {
+					-webkit-transform: scale(1, 1) translateY(0);
+					transform: scale(1, 1) translateY(0);
+				}
+				100% {
+					-webkit-transform: scale(1, 1) translateY(0);
+					transform: scale(1, 1) translateY(0);
+				}
+			}
+			@keyframes fa-bounce {
+				0% {
+					-webkit-transform: scale(1, 1) translateY(0);
+					transform: scale(1, 1) translateY(0);
+				}
+				10% {
+					-webkit-transform: scale(
+							var(--fa-bounce-start-scale-x, 1.1),
+							var(--fa-bounce-start-scale-y, 0.9)
+						)
+						translateY(0);
+					transform: scale(
+							var(--fa-bounce-start-scale-x, 1.1),
+							var(--fa-bounce-start-scale-y, 0.9)
+						)
+						translateY(0);
+				}
+				30% {
+					-webkit-transform: scale(
+							var(--fa-bounce-jump-scale-x, 0.9),
+							var(--fa-bounce-jump-scale-y, 1.1)
+						)
+						translateY(var(--fa-bounce-height, -0.5em));
+					transform: scale(
+							var(--fa-bounce-jump-scale-x, 0.9),
+							var(--fa-bounce-jump-scale-y, 1.1)
+						)
+						translateY(var(--fa-bounce-height, -0.5em));
+				}
+				50% {
+					-webkit-transform: scale(
+							var(--fa-bounce-land-scale-x, 1.05),
+							var(--fa-bounce-land-scale-y, 0.95)
+						)
+						translateY(0);
+					transform: scale(
+							var(--fa-bounce-land-scale-x, 1.05),
+							var(--fa-bounce-land-scale-y, 0.95)
+						)
+						translateY(0);
+				}
+				57% {
+					-webkit-transform: scale(1, 1)
+						translateY(var(--fa-bounce-rebound, -0.125em));
+					transform: scale(1, 1)
+						translateY(var(--fa-bounce-rebound, -0.125em));
+				}
+				64% {
+					-webkit-transform: scale(1, 1) translateY(0);
+					transform: scale(1, 1) translateY(0);
+				}
+				100% {
+					-webkit-transform: scale(1, 1) translateY(0);
+					transform: scale(1, 1) translateY(0);
+				}
+			}
+			@-webkit-keyframes fa-fade {
+				50% {
+					opacity: var(--fa-fade-opacity, 0.4);
+				}
+			}
+			@keyframes fa-fade {
+				50% {
+					opacity: var(--fa-fade-opacity, 0.4);
+				}
+			}
+			@-webkit-keyframes fa-beat-fade {
+				0%,
+				100% {
+					opacity: var(--fa-beat-fade-opacity, 0.4);
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+				50% {
+					opacity: 1;
+					-webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+					transform: scale(var(--fa-beat-fade-scale, 1.125));
+				}
+			}
+			@keyframes fa-beat-fade {
+				0%,
+				100% {
+					opacity: var(--fa-beat-fade-opacity, 0.4);
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+				50% {
+					opacity: 1;
+					-webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+					transform: scale(var(--fa-beat-fade-scale, 1.125));
+				}
+			}
+			@-webkit-keyframes fa-flip {
+				50% {
+					-webkit-transform: rotate3d(
+						var(--fa-flip-x, 0),
+						var(--fa-flip-y, 1),
+						var(--fa-flip-z, 0),
+						var(--fa-flip-angle, -180deg)
+					);
+					transform: rotate3d(
+						var(--fa-flip-x, 0),
+						var(--fa-flip-y, 1),
+						var(--fa-flip-z, 0),
+						var(--fa-flip-angle, -180deg)
+					);
+				}
+			}
+			@keyframes fa-flip {
+				50% {
+					-webkit-transform: rotate3d(
+						var(--fa-flip-x, 0),
+						var(--fa-flip-y, 1),
+						var(--fa-flip-z, 0),
+						var(--fa-flip-angle, -180deg)
+					);
+					transform: rotate3d(
+						var(--fa-flip-x, 0),
+						var(--fa-flip-y, 1),
+						var(--fa-flip-z, 0),
+						var(--fa-flip-angle, -180deg)
+					);
+				}
+			}
+			@-webkit-keyframes fa-shake {
+				0% {
+					-webkit-transform: rotate(-15deg);
+					transform: rotate(-15deg);
+				}
+				4% {
+					-webkit-transform: rotate(15deg);
+					transform: rotate(15deg);
+				}
+				8%,
+				24% {
+					-webkit-transform: rotate(-18deg);
+					transform: rotate(-18deg);
+				}
+				12%,
+				28% {
+					-webkit-transform: rotate(18deg);
+					transform: rotate(18deg);
+				}
+				16% {
+					-webkit-transform: rotate(-22deg);
+					transform: rotate(-22deg);
+				}
+				20% {
+					-webkit-transform: rotate(22deg);
+					transform: rotate(22deg);
+				}
+				32% {
+					-webkit-transform: rotate(-12deg);
+					transform: rotate(-12deg);
+				}
+				36% {
+					-webkit-transform: rotate(12deg);
+					transform: rotate(12deg);
+				}
+				40%,
+				100% {
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+			}
+			@keyframes fa-shake {
+				0% {
+					-webkit-transform: rotate(-15deg);
+					transform: rotate(-15deg);
+				}
+				4% {
+					-webkit-transform: rotate(15deg);
+					transform: rotate(15deg);
+				}
+				8%,
+				24% {
+					-webkit-transform: rotate(-18deg);
+					transform: rotate(-18deg);
+				}
+				12%,
+				28% {
+					-webkit-transform: rotate(18deg);
+					transform: rotate(18deg);
+				}
+				16% {
+					-webkit-transform: rotate(-22deg);
+					transform: rotate(-22deg);
+				}
+				20% {
+					-webkit-transform: rotate(22deg);
+					transform: rotate(22deg);
+				}
+				32% {
+					-webkit-transform: rotate(-12deg);
+					transform: rotate(-12deg);
+				}
+				36% {
+					-webkit-transform: rotate(12deg);
+					transform: rotate(12deg);
+				}
+				40%,
+				100% {
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+			}
+			@-webkit-keyframes fa-spin {
+				0% {
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+				100% {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes fa-spin {
+				0% {
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+				100% {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+			.fa-rotate-90 {
+				-webkit-transform: rotate(90deg);
+				transform: rotate(90deg);
+			}
+
+			.fa-rotate-180 {
+				-webkit-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+
+			.fa-rotate-270 {
+				-webkit-transform: rotate(270deg);
+				transform: rotate(270deg);
+			}
+
+			.fa-flip-horizontal {
+				-webkit-transform: scale(-1, 1);
+				transform: scale(-1, 1);
+			}
+
+			.fa-flip-vertical {
+				-webkit-transform: scale(1, -1);
+				transform: scale(1, -1);
+			}
+
+			.fa-flip-both,
+			.fa-flip-horizontal.fa-flip-vertical {
+				-webkit-transform: scale(-1, -1);
+				transform: scale(-1, -1);
+			}
+
+			.fa-rotate-by {
+				-webkit-transform: rotate(var(--fa-rotate-angle, none));
+				transform: rotate(var(--fa-rotate-angle, none));
+			}
+
+			.fa-stack {
+				display: inline-block;
+				vertical-align: middle;
+				height: 2em;
+				position: relative;
+				width: 2.5em;
+			}
+
+			.fa-stack-1x,
+			.fa-stack-2x {
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: var(--fa-stack-z-index, auto);
+			}
+
+			.svg-inline--fa.fa-stack-1x {
+				height: 1em;
+				width: 1.25em;
+			}
+			.svg-inline--fa.fa-stack-2x {
+				height: 2em;
+				width: 2.5em;
+			}
+
+			.fa-inverse {
+				color: var(--fa-inverse, #fff);
+			}
+
+			.sr-only,
+			.fa-sr-only {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border-width: 0;
+			}
+
+			.sr-only-focusable:not(:focus),
+			.fa-sr-only-focusable:not(:focus) {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border-width: 0;
+			}
+
+			.svg-inline--fa .fa-primary {
+				fill: var(--fa-primary-color, currentColor);
+				opacity: var(--fa-primary-opacity, 1);
+			}
+
+			.svg-inline--fa .fa-secondary {
+				fill: var(--fa-secondary-color, currentColor);
+				opacity: var(--fa-secondary-opacity, 0.4);
+			}
+
+			.svg-inline--fa.fa-swap-opacity .fa-primary {
+				opacity: var(--fa-secondary-opacity, 0.4);
+			}
+
+			.svg-inline--fa.fa-swap-opacity .fa-secondary {
+				opacity: var(--fa-primary-opacity, 1);
+			}
+
+			.svg-inline--fa mask .fa-primary,
+			.svg-inline--fa mask .fa-secondary {
+				fill: black;
+			}
+
+			.fad.fa-inverse,
+			.fa-duotone.fa-inverse {
+				color: var(--fa-inverse, #fff);
+			}
+		</style>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./rahul-logo 16X16.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./rahul-logo 32X32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="64x64"
+			href="./rahul-logo 64X64.png" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+		<meta
+			name="description"
+			content="Web site created using create-react-app" />
+		<title>Maddy</title>
+		<link href="./public/css/main.css" rel="stylesheet" />
+		<script
+			src="/_vercel/speed-insights/script.js"
+			defer=""
+			data-sdkn="@vercel/speed-insights/react"
+			data-sdkv="1.0.10"></script>
+		<script
+			src="/_vercel/insights/script.js"
+			defer=""
+			data-sdkn="@vercel/analytics/react"
+			data-sdkv="1.2.2"></script>
+		<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+	</head>
+	<body
+		data-new-gr-c-s-check-loaded="14.1168.0"
+		data-gr-ext-installed=""
+		data-new-gr-c-s-loaded="14.1168.0">
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<div id="root">
+			<div class="App">
+				<div class="Screen_Small">
+					<div>
+						<svg
+							aria-hidden="true"
+							focusable="false"
+							data-prefix="fas"
+							data-icon="circle-exclamation"
+							class="svg-inline--fa fa-circle-exclamation"
+							role="img"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"
+							style="color: rgb(255, 255, 255)">
+							<path
+								fill="currentColor"
+								d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+						</svg>
+					</div>
+					<div>Display too small</div>
+				</div>
+				<div class="main_Screen">
+					<div
+						style="
+							margin: 0px;
+							padding: 0px;
+							position: fixed;
+							top: 0px;
+							z-index: 99;
+							background-color: var(--neon-green);
+							height: 4px;
+							transition: null 0.2s ease-out 0s;
+							width: 0%;
+						"></div>
+					<div class="Header">
+						<div class="navbar">
+							<div class="navbaritems">
+								<a
+									class="active active"
+									href="/"
+									aria-current="page"
+									><h3 class="home-nav">Home</h3></a
+								><a class="" href="/about"
+									><h3 class="about-nav">About</h3></a
+								><a class="" href="/projects"
+									><h3 class="projects-nav">Projects</h3></a
+								><a class="" href="/contact"
+									><h3 class="contact-nav">Contact</h3></a
+								>
+							</div>
+							<header>
+								<div class="hamburger">
+									<div
+										class="hamburger-react"
+										aria-expanded="false"
+										role="button"
+										tabindex="0"
+										style="
+											cursor: pointer;
+											height: 48px;
+											position: relative;
+											transition: all 0.4s
+												cubic-bezier(0, 0, 0, 1) 0s;
+											user-select: none;
+											width: 48px;
+											outline: none;
+										">
+										<div
+											style="
+												transition: all 0.2s
+													cubic-bezier(0, 0, 0, 1)
+													0.2s;
+												transform: none;
+											">
+											<div
+												style="
+													background: currentcolor;
+													height: 3px;
+													left: 8px;
+													position: absolute;
+													width: 32px;
+													top: 13px;
+													transition: all 0.2s
+														cubic-bezier(0, 0, 0, 1)
+														0s;
+													transform: none;
+												"></div>
+										</div>
+										<div
+											style="
+												transition: all 0.2s
+													cubic-bezier(0, 0, 0, 1) 0s;
+												opacity: 1;
+											">
+											<div
+												style="
+													background: currentcolor;
+													height: 3px;
+													left: 8px;
+													position: absolute;
+													width: 32px;
+													top: 23px;
+													transition: all 0.2s
+														cubic-bezier(0, 0, 0, 1)
+														0s;
+												"></div>
+										</div>
+										<div
+											style="
+												transition: all 0.2s
+													cubic-bezier(0, 0, 0, 1)
+													0.2s;
+												transform: none;
+											">
+											<div
+												style="
+													background: currentcolor;
+													height: 3px;
+													left: 8px;
+													position: absolute;
+													width: 32px;
+													top: 33px;
+													transition: all 0.2s
+														cubic-bezier(0, 0, 0, 1)
+														0s;
+													transform: none;
+												"></div>
+										</div>
+									</div>
+								</div>
+								<div class="nav-links closed">
+									<div class="nav-links">
+										<a
+											class="active active"
+											href="/"
+											aria-current="page"
+											><h3 class="home-nav">Home</h3></a
+										><a class="" href="/about"
+											><h3 class="about-nav">About</h3></a
+										><a class="" href="/projects"
+											><h3 class="projects-nav">
+												Projects
+											</h3></a
+										><a class="" href="/contact"
+											><h3 class="contact-nav">
+												Contact
+											</h3></a
+										>
+									</div>
+								</div>
+							</header>
+						</div>
+					</div>
+					<div>
+						<div class="section-flex">
+							<div id="hero-page">
+								<div class="heroitems">
+									<div class="infinitescroll">
+										<div class="container">
+											<div class="infinitehorizonscroll">
+												<div class="infinitehorizon1">
+													<span
+														>UI Designer UI Designer
+														UI Designer UI Designer
+														UI Designer</span
+													><span
+														>UI Designer UI Designer
+														UI Designer UI Designer
+														UI Designer</span
+													>
+												</div>
+												<div class="infinitehorizon2">
+													<span
+														>Frontend Developer
+														Frontend Developer
+														Frontend Developer
+														Frontend Developer</span
+													><span
+														>Frontend Developer
+														Frontend Developer
+														Frontend Developer
+														Frontend Developer</span
+													>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="desc">
+										<p class="line1">Hey There I'm</p>
+										<h1 class="name">RAHUL</h1>
+										<p class="line2">
+											Currently Studying Computer Science
+											and Engineering
+										</p>
+										<div class="socials">
+											<a
+												href="https://www.linkedin.com/in/rahul-s-a5a375252/"
+												target="_blank"
+												><img
+													src="data:image/png;base64,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"
+													alt="Linkedinacc"
+													class="linkedinacc" /></a
+											><a
+												href="https://github.com/srahul099"
+												target="_blank"
+												><img
+													src="/static/media/github.3c3bcd290dda739330b3.png"
+													alt="githubacc"
+													class="githubacc"
+											/></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="about-page">
+								<div class="about_Container">
+									<h2 class="about-Heading">About</h2>
+									<p class="about_Desc">
+										Hi there! I'm Maddy, a third-year
+										Computer Science student at SRM
+										Institute with a passion for crafting
+										user-centric experiences. I specialize
+										in UI/UX design, front-end development,
+										and graphic design, with expertise in
+										HTML, CSS, JavaScript, React, Node.js,
+										Tailwind CSS, QML, and C++. I thrive on
+										collaboration and bring experience in
+										agile scrum methodologies. Beyond
+										coding, I enjoy photography, graphic
+										design, and exploring music. Let's
+										connect and bring your digital visions
+										to life!
+									</p>
+									<div class="more_About">
+										<a class="more_About" href="/about"
+											>More..</a
+										>
+									</div>
+								</div>
+							</div>
+							<div class="behanceprjs">
+								<div class="behance_wrapper">
+									<div class="behance_components">
+										<iframe
+											src="https://www.behance.net/embed/project/196275937?ilo0=1"
+											height="316"
+											width="404"
+											frameborder="0"
+											allow="clipboard-write"
+											refererpolicy="strict-origin-when-cross-origin"></iframe>
+									</div>
+									<div class="behance_components">
+										<iframe
+											src="https://www.behance.net/embed/project/194096535?ilo0=1"
+											height="316"
+											width="404"
+											frameborder="0"
+											allow="clipboard-write"
+											refererpolicy="strict-origin-when-cross-origin"></iframe>
+									</div>
+									<div class="behance_components">
+										<iframe
+											src="https://www.behance.net/embed/project/190665211?ilo0=1"
+											height="316"
+											width="404"
+											frameborder="0"
+											allow="clipboard-write"
+											refererpolicy="strict-origin-when-cross-origin"></iframe>
+									</div>
+									<div class="behance_components">
+										<iframe
+											src="https://www.behance.net/embed/project/190658625?ilo0=1"
+											height="316"
+											width="404"
+											frameborder="0"
+											allow="clipboard-write"
+											refererpolicy="strict-origin-when-cross-origin"></iframe>
+									</div>
+								</div>
+							</div>
+							<div id="projects-page">
+								<div class="projects-section">
+									<div class="projects-header">
+										<h1>Recent Projects</h1>
+										<a
+											class="more-projects"
+											href="/projects"
+											><h2>See All</h2>
+											<div class="more">
+												<svg
+													aria-hidden="true"
+													focusable="false"
+													data-prefix="fas"
+													data-icon="arrow-right"
+													class="svg-inline--fa fa-arrow-right more-icon"
+													role="img"
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 448 512">
+													<path
+														fill="currentColor"
+														d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path>
+												</svg></div
+										></a>
+									</div>
+									<div class="projects">
+										<a
+											class="projectpage-container"
+											href="/projects/Portfolio"
+											><img
+												src="/static/media/Portfolio-banner.8448f6590fd6525e0e9c.png"
+												alt=""
+												class="project-image" />
+											<div class="project-desc">
+												<h2>Portfolio</h2>
+												<div class="project_type">
+													Frontend
+												</div>
+												<p>
+													Developed to showcase my
+													skills in web development,
+													my portfolio website
+													exemplifies proficiency in
+													technologies such as
+													ReactJS, CSS, and Figma.
+												</p>
+												<img
+													src="https://skillicons.dev/icons?i=react,javascript,css,figma"
+													alt="tech stack"
+													class="project-tech" /></div></a
+										><a
+											class="projectpage-container"
+											href="/projects/Isrowebsiteredesign"
+											><img
+												src="/static/media/ISRO-banner.b0bd103bf3b65be41b59.png"
+												alt=""
+												class="project-image" />
+											<div class="project-desc">
+												<h2>ISRO Website Redesign</h2>
+												<div class="project_type">
+													UI Design
+												</div>
+												<p>
+													Revamped the whole ISRO
+													website with a modern and
+													clean design which
+													emphasises the importance of
+													ISRO's work and easily
+													accesible information.
+												</p>
+												<img
+													src="https://skillicons.dev/icons?i=figma"
+													alt="tech stack"
+													class="project-tech" /></div></a
+										><a
+											class="project-container"
+											href="/projects/UserAuthentication"
+											><img
+												src="/static/media/UserAunthentication-banner.4e178997b26683177d4b.png"
+												alt=""
+												class="project-image" />
+											<div class="project-desc">
+												<h2>
+													User Aunthentication System
+												</h2>
+												<div class="project_type">
+													Full Stack
+												</div>
+												<p>
+													Developed a cross-platform
+													authentication system using
+													Qt Creator (QML/C++) for
+													streamlined user experience
+													across desktop, mobile, and
+													web.
+												</p>
+												<img
+													src="https://skillicons.dev/icons?i=qt,cpp,figma"
+													alt="tech stack"
+													class="project-tech" /></div></a
+										><a
+											class="project-container"
+											href="/projects/weatherapp"
+											><img
+												src="/static/media/Weather-banner.d065dd66ff4b9f20522c.png"
+												alt=""
+												class="project-image" />
+											<div class="project-desc">
+												<h2>Weather App</h2>
+												<div class="project_type">
+													Full Stack
+												</div>
+												<p>
+													Developed a full-stack
+													weather app using
+													NodeJS/Express for
+													server-side logic and
+													ReactJS/Handlebars for
+													interactive frontend,
+													delivering real-time weather
+													data.
+												</p>
+												<img
+													src="https://skillicons.dev/icons?i=html,css,javascript,nodejs,express"
+													alt="tech stack"
+													class="project-tech" /></div></a
+										><a
+											class="project-container"
+											href="/projects/credclone"
+											><img
+												src="/static/media/Credclone-banner.0ece5172df9dba3f1545.png"
+												alt=""
+												class="project-image" />
+											<div class="project-desc">
+												<h2>Cred Clone</h2>
+												<div class="project_type">
+													Frontend
+												</div>
+												<p>
+													Crafted a responsive CRED
+													Landing Page clone using
+													ReactJS for modularity and
+													interactivity, styled with
+													CSS to match the original
+													design.
+												</p>
+												<img
+													src="https://skillicons.dev/icons?i=react,css,javascript"
+													alt="tech stack"
+													class="project-tech" /></div
+										></a>
+									</div>
+									<a
+										class="more-projects_mobile"
+										href="/projects"
+										><h2>See All</h2>
+										<div class="more">
+											<svg
+												aria-hidden="true"
+												focusable="false"
+												data-prefix="fas"
+												data-icon="arrow-right"
+												class="svg-inline--fa fa-arrow-right more-icon"
+												role="img"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 448 512">
+												<path
+													fill="currentColor"
+													d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path>
+											</svg></div
+									></a>
+								</div>
+							</div>
+							<div id="contact-page">
+								<div class="contact-container">
+									<div class="getintouch">
+										<div class="contact-heading">
+											<h1>Get in Touch</h1>
+										</div>
+										<div class="contact-desc">
+											<p>
+												If you are interested in my work
+												or want to provide feedback
+												about this website, I am open to
+												exchanging ideas .
+											</p>
+										</div>
+									</div>
+									<div class="Contactform-App">
+										<form class="contact-form">
+											<div class="field">
+												<label for="from_name"
+													>Name</label
+												><input
+													type="text"
+													name="from_name"
+													id="from_name" />
+											</div>
+											<div class="field">
+												<label for="user_email"
+													>Email</label
+												><input
+													type="email"
+													name="user_email"
+													id="user_email" />
+											</div>
+											<div class="field">
+												<label for="message"
+													>Message</label
+												><textarea
+													name="message"
+													id="message"></textarea>
+											</div>
+											<input
+												class="submit-btn"
+												type="submit"
+												value="Send" />
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-container">
+						<div class="footer-desc">
+							<a class="active" href="/" aria-current="page"
+								><h2>Maddy.</h2></a
+							>
+							<p class="footer-userdesc">
+								I'm a web developer and designer based in India.
+								I have a very deep passion to design stuff ❤
+								This Website is made with the lot of love and
+								passion.
+							</p>
+							<div class="icons">
+								<a href=""
+									><svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="40"
+										height="40"
+										viewBox="0 0 24 24"
+										fill="#d5ff3f">
+										<path
+											d="M12,9.52A2.48,2.48,0,1,0,14.48,12,2.48,2.48,0,0,0,12,9.52Zm9.93-2.45a6.53,6.53,0,0,0-.42-2.26,4,4,0,0,0-2.32-2.32,6.53,6.53,0,0,0-2.26-.42C15.64,2,15.26,2,12,2s-3.64,0-4.93.07a6.53,6.53,0,0,0-2.26.42A4,4,0,0,0,2.49,4.81a6.53,6.53,0,0,0-.42,2.26C2,8.36,2,8.74,2,12s0,3.64.07,4.93a6.86,6.86,0,0,0,.42,2.27,3.94,3.94,0,0,0,.91,1.4,3.89,3.89,0,0,0,1.41.91,6.53,6.53,0,0,0,2.26.42C8.36,22,8.74,22,12,22s3.64,0,4.93-.07a6.53,6.53,0,0,0,2.26-.42,3.89,3.89,0,0,0,1.41-.91,3.94,3.94,0,0,0,.91-1.4,6.6,6.6,0,0,0,.42-2.27C22,15.64,22,15.26,22,12S22,8.36,21.93,7.07Zm-2.54,8A5.73,5.73,0,0,1,19,16.87,3.86,3.86,0,0,1,16.87,19a5.73,5.73,0,0,1-1.81.35c-.79,0-1,0-3.06,0s-2.27,0-3.06,0A5.73,5.73,0,0,1,7.13,19a3.51,3.51,0,0,1-1.31-.86A3.51,3.51,0,0,1,5,16.87a5.49,5.49,0,0,1-.34-1.81c0-.79,0-1,0-3.06s0-2.27,0-3.06A5.49,5.49,0,0,1,5,7.13a3.51,3.51,0,0,1,.86-1.31A3.59,3.59,0,0,1,7.13,5a5.73,5.73,0,0,1,1.81-.35h0c.79,0,1,0,3.06,0s2.27,0,3.06,0A5.73,5.73,0,0,1,16.87,5a3.51,3.51,0,0,1,1.31.86A3.51,3.51,0,0,1,19,7.13a5.73,5.73,0,0,1,.35,1.81c0,.79,0,1,0,3.06S19.42,14.27,19.39,15.06Zm-1.6-7.44a2.38,2.38,0,0,0-1.41-1.41A4,4,0,0,0,15,6c-.78,0-1,0-3,0s-2.22,0-3,0a4,4,0,0,0-1.38.26A2.38,2.38,0,0,0,6.21,7.62,4.27,4.27,0,0,0,6,9c0,.78,0,1,0,3s0,2.22,0,3a4.27,4.27,0,0,0,.26,1.38,2.38,2.38,0,0,0,1.41,1.41A4.27,4.27,0,0,0,9,18.05H9c.78,0,1,0,3,0s2.22,0,3,0a4,4,0,0,0,1.38-.26,2.38,2.38,0,0,0,1.41-1.41A4,4,0,0,0,18.05,15c0-.78,0-1,0-3s0-2.22,0-3A3.78,3.78,0,0,0,17.79,7.62ZM12,15.82A3.81,3.81,0,0,1,8.19,12h0A3.82,3.82,0,1,1,12,15.82Zm4-6.89a.9.9,0,0,1,0-1.79h0a.9.9,0,0,1,0,1.79Z"></path></svg></a
+								><a href=""
+									><svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="40"
+										height="40"
+										viewBox="0 0 24 24"
+										fill="#d5ff3f">
+										<path
+											d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z"></path></svg></a
+								><a href=""
+									><svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="40"
+										height="40"
+										viewBox="0 0 24 24"
+										fill="#d5ff3f">
+										<path
+											d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z"></path></svg></a
+								><a href=""
+									><svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="40"
+										height="40"
+										viewBox="0 0 24 24"
+										fill="#d5ff3f">
+										<path
+											d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34.3,2.87,2.87,0,0,0-1.46.74c-.9.83-1,2.25-1.1,3.45a48.29,48.29,0,0,0,0,6.48,9.55,9.55,0,0,0,.3,2,3.14,3.14,0,0,0,.71,1.36,2.86,2.86,0,0,0,1.49.78,45.18,45.18,0,0,0,6.5.33c3.5.05,6.57,0,10.2-.28a2.88,2.88,0,0,0,1.53-.78,2.49,2.49,0,0,0,.61-1,10.58,10.58,0,0,0,.52-3.4C23,13.69,23,10.31,23,9.71ZM9.74,14.85V8.66l5.92,3.11C14,12.69,11.81,13.73,9.74,14.85Z"></path>
+									</svg>
+								</a>
+							</div>
+							<div class="footer-text">
+								<p>Portfolio v2.0</p>
+								<p>© 2024 Maddy</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
