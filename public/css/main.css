@@ -739,7 +739,7 @@ header {
 	text-align: left;
 }
 .about-Heading {
-	font-family: Humane;
+	font-family: DM Sans;
 	font-size: 4rem;
     color: var(--neon-green);
 }
@@ -801,7 +801,7 @@ header {
 	padding: 30px 40px;
 }
 .projects-header h1 {
-	font-family: Humane;
+	font-family: DM Sans;
 	font-size: 5rem;
 }
 .more-projects {
